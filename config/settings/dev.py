@@ -6,7 +6,7 @@ load_dotenv(verbose=True) #.env가 누락일경우 경고메시지 출력하는�
  
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql', 
         'NAME': os.environ.get("DB_NAME_DEV"),
         'USER': os.environ.get("WRITE_DB_USER_DEV"),
         'PASSWORD': os.environ.get("WRITE_DB_PASSWORD_DEV"),
