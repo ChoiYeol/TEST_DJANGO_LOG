@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 load_dotenv(verbose=True) #.env가 누락일경우 경고메시지 출력하는옵션
  
  
- 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
