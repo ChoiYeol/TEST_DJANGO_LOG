@@ -33,11 +33,11 @@ class SoftDeleteModel(models.Model):
         self.save(update_fields=['deletedat'])
 
 
-class QuickSeqs(models.Model):
+class QuickSeqs(SoftDeleteModel):
     index = models.AutoField(primary_key=True)
     fk_quick_id = models.IntegerField(blank=True, null=True)
-    createdat = models.DateTimeField(db_column='created_at')  # Field name made lowercase.
-    updatedat = models.DateTimeField(db_column='updated_at')  # Field name made lowercase.
+    createdat = models.DateTimeField(db_column='created_at', auto_now_add=True)  # Field name made lowercase.
+    updatedat = models.DateTimeField(db_column='updated_at', auto_now=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
