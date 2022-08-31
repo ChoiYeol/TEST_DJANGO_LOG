@@ -40,7 +40,7 @@ class QuickSeqs(SoftDeleteModel):
     updatedat = models.DateTimeField(db_column='updated_at', auto_now=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'quick_seqs'
 
 

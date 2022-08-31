@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include , re_path
 # from log_app import urls 
-from log_app import log_app_url
+from log_app import url
 
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    re_path(r"^api/", include(log_app_url)),
+    re_path(r"^api/", include(url)),
     # path(r"^soldoc/$", include(log_app_urld) ),
     
 ]
